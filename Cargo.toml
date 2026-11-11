@@ -1,0 +1,18 @@
+[package]
+name = "arlineo"
+version = "0.4.0"
+edition = "2024"
+rust-version = "1.85"
+license = "Apache-2.0"
+description = "A code map for teams of humans and AI agents working in many git worktrees at once"
+readme = "README.md"
+keywords = ["code-map", "call-graph", "worktree", "static-analysis", "agents"]
+categories = ["command-line-utilities", "development-tools"]
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[profile.release]
+debug = false
+strip = "symbols"
